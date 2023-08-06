@@ -63,6 +63,7 @@ body {
 .container form {
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .container form > label {
@@ -76,8 +77,14 @@ body {
   border-radius: 8px;
   border: 2px solid var(--grey);
   height: 50px;
-  margin-bottom: 2rem;
   padding: 0 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+.container form > span#email-error {
+  margin-bottom: 2rem;
+  position: absolute;
 }
 
 input::placeholder {
