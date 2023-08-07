@@ -9,7 +9,7 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/images/favicon-32x32.png"
+      href="./images/icon-list.ico"
     />
 
     <title>Newsletter sign-up form with success message</title>
@@ -17,14 +17,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;600&family=Roboto:wght@400;500;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <section class="form-component">
+    <section class="form-component" id="form">
       <img
         src="images/illustration-sign-up-mobile.svg"
         alt="Gradient background"
@@ -40,28 +40,37 @@
           <li>And much more!</li>
         </ul>
 
-        <form>
+        <div class="input-group">
           <label for="email">Email Address</label>
           <input
             type="email"
-            name="email"
-            id="email"
+            spellcheck="false"
+            id="email-field"
             placeholder="email@company.com"
+            onkeyup="validateEmail()"
           />
           <span id="email-error"></span>
-          <button id="btn">Subscribe to monthly newsletter</button>
-        </form>
+        </div>
+        <button id="btn">Subscribe to monthly newsletter</button>
       </div>
     </section>
-    <!-- Sign-up form start -->
-
-    <!-- Sign-up form end -->
 
     <!-- Success message start -->
-    <section class="success">
-      Thanks for subscribing! A confirmation email has been sent to
-      ash@loremcompany.com. Please open it and click the button inside to
-      confirm your subscription. Dismiss message
+    <section class="form-success hidden" id="form-success">
+      <div class="form-success-container">
+        <img
+          src="./images/icon-success.svg"
+          alt="Success Icon"
+          class="form-success-icon"
+        />
+        <h1>Thanks for subscribing!</h1>
+        <p>
+          A confirmation email has been sent to
+          <span id="email-details"></span> Please open it and click the button
+          inside to confirm your subscription.
+        </p>
+        <button id="dismiss-btn">Dismiss message</button>
+      </div>
     </section>
     <!-- Success message end -->
 
