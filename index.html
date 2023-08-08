@@ -42,6 +42,7 @@
 
         <div class="input-group">
           <label for="email">Email Address</label>
+          <span id="email-error"></span>
           <input
             type="email"
             spellcheck="false"
@@ -49,7 +50,6 @@
             placeholder="email@company.com"
             onkeyup="validateEmail()"
           />
-          <span id="email-error"></span>
         </div>
         <button id="btn">Subscribe to monthly newsletter</button>
       </div>

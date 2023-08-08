@@ -99,10 +99,10 @@ body {
   color: red;
   margin-bottom: 2rem;
   position: absolute;
-  top: 75px;
-  left: 2px;
-  font-size: 1rem;
-  font-weight: 300;
+  top: 0px;
+  left: 260px;
+  font-size: 0.75rem;
+  font-weight: 700;
 }
 
 input::placeholder {
