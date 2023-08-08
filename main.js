@@ -8,7 +8,6 @@ const formSuccess = document.getElementById("form-success");
 const emailDetails = document.getElementById("email-details");
 const btnDismiss = document.getElementById("dismiss-btn");
 
-console.log(inputElement);
 function addRedInput() {
   return inputEmail.classList.add("red");
 }
